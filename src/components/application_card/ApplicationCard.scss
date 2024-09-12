@@ -1,0 +1,243 @@
+.applications_card {
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: fit-content;
+    font-size: var(--fontOrigin);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px -1px rgb(66 100 150);
+    cursor: pointer;
+    transition: all var(--speed) ease;
+    border-radius: 20px;
+    overflow: auto;
+    -webkit-transition: all var(--speed) ease;
+    -moz-transition: all var(--speed) ease;
+    -ms-transition: all var(--speed) ease;
+    -o-transition: all var(--speed) ease;
+  }
+
+  .applications_card:hover {
+    box-shadow: 0px 0px 25px 3px rgb(66 100 150);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+
+  .applications_card_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+
+    img:hover {
+      -webkit-transform: scale(2.1, 2.1) translateZ(0);
+      transform: scale(2.1, 2.1) translateZ(0);
+      -moz-transform: scale(2.1, 2.1) translateZ(0);
+      -ms-transform: scale(2.1, 2.1) translateZ(0);
+      -o-transform: scale(2.1, 2.1) translateZ(0);
+    }
+  }
+
+  .applications_card:hover .applications_card_image img {
+    opacity: 0.5;
+    -webkit-transform: translateY(15%) scale(1, 1);
+    /* -webkit-transform: scale(1, 1); */
+  }
+
+  .applications_card_header {
+    display: grid;
+    width: 100%;
+    height: 200px;
+  }
+
+  .applications_card_profile {
+    align-self: center;
+    justify-self: center;
+    display: block;
+    width: 10vmax;
+    height: 10vmax;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+  }
+
+  .applications_card_profile img {
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    -webkit-filter: grayscale(50%) contrast(75%) brightness(1.3);
+    filter: grayscale(50%) contrast(75%) brightness(1.3);
+    -webkit-transition: all var(--speed) ease;
+    transition: all var(--speed) ease;
+    mix-blend-mode: normal;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+  }
+
+  .applications_card:hover .applications_card_profile {
+    -webkit-transform: scale(1, 1) translateZ(0);
+    transform: scale(1, 1) translateZ(0);
+    -moz-transform: scale(1, 1) translateZ(0);
+    -ms-transform: scale(1, 1) translateZ(0);
+    -o-transform: scale(1, 1) translateZ(0);
+  }
+
+  .applications_card img:hover  {
+    -webkit-transform: scale(2, 2) translateZ(0);
+    transform: scale(2, 2) translateZ(0);
+    -moz-transform: scale(2, 2) translateZ(0);
+    -ms-transform: scale(2, 2) translateZ(0);
+    -o-transform: scale(2, 2) translateZ(0);
+  }
+
+  .applications_card_body {
+    display: grid;
+    padding: 0 20px;
+  }
+
+  .applications_card_name {
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 2px;
+    color: white;
+    font-size: var(--fontLarge);
+    font-weight: var(--fontLight);
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    background: -webkit-linear-gradient(white, #a1a1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: all var(--speed) ease;
+    transition: all var(--speed) ease;
+    -moz-transition: all var(--speed) ease;
+    -ms-transition: all var(--speed) ease;
+    -o-transition: all var(--speed) ease;
+  }
+
+  .applications_card:hover .applications_card_name {
+    background: -webkit-linear-gradient(white, #c1c1c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .applications_card_job {
+    align-self: center;
+    justify-self: center;
+    display: inline-block;
+    font-size: var(--fontSmall);
+    font-weight: var(--fontLight);
+    text-align: center;
+    letter-spacing: 0.35rem;
+    color: white;
+    -webkit-transition: all var(--speed) ease;
+    transition: all var(--speed) ease;
+  }
+
+  .applications_card:hover .applications_card_job {
+    color: rgba(100, 130, 200, 1);
+  }
+
+  .applications_card_bio {
+    position: relative;
+    -webkit-transform: translateY(30%);
+    transform: translateY(30%);
+    display: block;
+    margin: 22px 0 16px 0;
+    font-size: var(--fontMedium);
+    font-weight: var(--fontLight);
+    /*text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.35);*/
+    color: rgba(255, 255, 255, 0.65);
+    opacity: 0;
+    -webkit-transition: all var(--speed) ease;
+    transition: all var(--speed) ease;
+  }
+
+  .applications_card:hover .applications_card_bio {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .applications_card_footer {
+    position: relative;
+    text-align: center;
+    transform: translateY(60%);
+    align-items: center;
+    grid-template-areas: "date category";
+    opacity: 0;
+    transition: all var(--speed) ease;
+  }
+
+  .applications_card:hover .applications_card_footer {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .applications_card_date {
+    grid-area: date;
+    display: inline-block;
+    align-self: left;
+    justify-self: left;
+    font-size: var(--fontSmall);
+    font-weight: var(--fontLight);
+    text-transform: uppercase;
+    text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.45);
+    color: rgba(250, 250, 250, 0.4);
+  }
+
+  .applications_card_button {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    background: var(--color-bg);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    margin-bottom: 10px;
+  }
+
+  /* MODIFIERS */
+  .applications_card[data-effect="blur"]:hover .applications_card_image img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+  }
+
+  .applications_card[data-effect="blur"] .applications_card_image img {
+    animation-name: blur;
+  }
+
+  .applications_card[data-effect="color"]:hover {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    box-shadow: 0 40px 260px rgba(255, 0, 0, 0.1), 0 40px 130px rgba(250, 100, 100, 0.2), -80px -40px 230px rgba(0, 200, 250, 0.15), 80px 40px 230px rgba(120, 120, 255, 0.15);
+  }
+
+  .applications_card[data-effect="color"] .applications_card_image {
+    background: linear-gradient(to bottom, rgba(20, 20, 100, 1), rgba(255, 100, 100, 0.5))
+  }
+
+  .applications_card[data-effect="color"]:hover .applications_card_image img {
+    opacity: 0.8;
+  }
+
+  .applications_card[data-effect="color"]:hover .applications_card_profile img {
+    -webkit-filter: grayscale(50%) contrast(80%) brightness(1.6);
+    filter: grayscale(50%) contrast(80%) brightness(1.6);
+    mix-blend-mode: normal;
+  }

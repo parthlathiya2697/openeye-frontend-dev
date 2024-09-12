@@ -1,0 +1,9 @@
+.InputComponent {
+	padding: 40px;
+	display: flex;
+}
+
+.InputComponent:hover{
+	border: 1px solid var(--color-light);
+    border-radius: 12px;
+}

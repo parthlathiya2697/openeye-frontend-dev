@@ -1,0 +1,67 @@
+/* https://codepen.io/cssence/pen/KKQxNPM */
+
+@keyframes clock_live {
+
+	0%,
+	100% {
+		content: '🕛';
+	}
+
+	8.33333% {
+		content: '🕐';
+	}
+
+	16.6667% {
+		content: '🕑';
+	}
+
+	25.0000% {
+		content: '🕒';
+	}
+
+	33.3333% {
+		content: '🕓';
+	}
+
+	41.6667% {
+		content: '🕔';
+	}
+
+	50.0000% {
+		content: '🕕';
+	}
+
+	58.3333% {
+		content: '🕖';
+	}
+
+	66.6667% {
+		content: '🕗';
+	}
+
+	75.0000% {
+		content: '🕘';
+	}
+
+	83.3333% {
+		content: '🕙';
+	}
+
+	91.6667% {
+		content: '🕚';
+	}
+}
+
+.emoji_animating {
+	font-size: 10vmin;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.emoji_animating::after {
+	content: '';
+	position: absolute;
+	animation: clock_live 1s infinite;
+}

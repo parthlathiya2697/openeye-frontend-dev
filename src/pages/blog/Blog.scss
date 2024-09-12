@@ -1,0 +1,12 @@
+/* https://codepen.io/dp_lewis/pen/ZEbyaXq */
+* {
+	box-sizing: border-box;
+  }
+
+.carousal {
+	display: flex;
+	flex-direction: row;
+	overflow-scrolling: touch;
+	overflow-x: auto;
+	scroll-snap-type: both mandatory;
+  }

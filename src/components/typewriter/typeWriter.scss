@@ -1,0 +1,22 @@
+.typewriter {
+  font-family: monospace;
+  font-size: 18px;
+  display: inline-block;
+  border-right: 10px solid black;
+}
+
+.typewriter_blink {
+  animation: anim_typewriter_blink 0.75s step-start infinite;
+}
+
+@keyframes anim_typewriter_blink {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
